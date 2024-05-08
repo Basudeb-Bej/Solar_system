@@ -1,74 +1,120 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
  body {
-           margin: 45vh;
-           height: 70vh;
-           display: flex;
-           align-items: center;
-           justify-content: center;
+
+           display: grid;
+           place-items: center;
+           width: 100dvw;
+           height: 100dvh;
            background-color: black;
            overflow: hidden;
      }
+
       .container {
-        font-size: 10px;
-        height: 100em;
-        width: 100em;
-        position: center;
+        width: 100vw;
+        aspect-ratio: 1 / 1;
+        max-width: 700px;
+        position: relative;
+      }
+
+      @keyframes blooming {
+        50% {
+          background-color: #f0af0a;
+        }
       }
       .sun {
-        position: absolute;
-        left: 15em;
-        right: 15em;
-        width: 10em;
-        height: 10em;
+        width: 20%;
+        aspect-ratio: 1 / 1;
         border-radius: 50%;
-        background-color: #F0E80A;
-        box-shadow: 0 0 3em white;
-      }
-       .earth,.moon {
+        margin: auto auto;
+        background-color: #f09f0a;
+        filter: blur(0.3px);
         position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition-duration: .5s;
+        animation: blooming .01s linear infinite;
+        box-shadow: 0 0 100px 8px rgb(255, 251, 0);
+      }
+
+       .moon {
+        border-radius: 50%;
         border-style: solid;
         border-color: white transparent transparent transparent;
         border-width: 0.1em 0.1em 0 0;
-        border-radius: 50%;
      }
-      .earth {
-        top: 5em;
-        left: 5em;
-        width: 30em;
-        height: 30em;
-        animation: orbit 36.5s linear infinite;
-      }
-      .moon {
-        right: 0em;
-        width: 8em;
-        height: 8em;
-        animation: orbit 2.7s linear infinite;
-      }
-     
-      .earth::before {
-        top: 2.8em;
-        right: 2.8em;
-        width: 3em;
-        height: 3em;
-        background-color: aqua;
-        box-shadow: 0 0 1em white;
-        content: '';
+
+      .orbit {
+        border: 1px solid red;
+        border-style: solid;
         border-radius: 50%;
         position: absolute;
+        border-color: transparent transparent transparent white;
+        border-width: 0.1em 0 0 0.1em;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        aspect-ratio: 1 / 1;
+        animation: rotate 36.5s linear infinite;
+      }
 
+      .moon {
+        position: relative;
+        margin-top: -3%;
+        margin-left: -3%;
+        width: 35%;
+        z-index: -4;
+        aspect-ratio: 1 / 1;
+        animation: orbit 2.7s linear infinite;
+      }
+
+      .earth {
+        width: 40%;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: rgb(0, 72, 207);
+        transition-duration: 2.2s;
+        box-shadow: 0 0 100px 1px rgb(16, 121, 218);
+      }
+      @keyframes blooming-moon {
+        50% {
+          background-color: #ccd0d0;
+        }
       }
       .moon::before {
            content: '';
            border-radius: 50%;
            position: absolute;
-           top: 0.8em;
-           right: 0.2em;
-           width: 1.2em;
-           height: 1.2em;
+           display: block;
+           width: 20%;
+           right: 0;
+           transform: translateY(50%);
+           aspect-ratio: 1 / 1;
+           animation: blooming-moon .01s linear infinite;
            background-color: silver;
+           box-shadow: 0 0 100px 5px rgb(255, 255, 255);
 
 }
-@keyframes orbit {
-   to {
+@keyframes orbit { 
+  to {
        transform: rotate(360deg);
       }
         }
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+      }
+}
