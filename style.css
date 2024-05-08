@@ -83,6 +83,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
       /*  background: rgb(0, 72, 207);*/
+        background: aqua;
         transition-duration: 2.2s;
         box-shadow: 0 0 100px 1px rgb(16, 121, 218);
       }
