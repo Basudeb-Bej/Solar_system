@@ -32,14 +32,6 @@ This project helps visualize our solar system interactively and introduces basic
 
 ## 📸 Screenshots
 
-> (`image.jpg`)
+> image.jpg
 
 ---
-
-## 📁 Folder Structure
-
-```plaintext
-solar-system/
-├── index.html
-├── style.css
-└── script.js
