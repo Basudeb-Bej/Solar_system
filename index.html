@@ -1,18 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Simple solar_system</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System Simulation</title>
   <link rel="stylesheet" href="style.css">
-  </head>
+</head>
 <body>
-   <div class="container">
-     <div class="sun"></div>
-       <div class="orbit">
-          <div class="moon">
-            <div class="earth"></div>
-          </div>
-       </div> 
-   </div>
+  <div class="universe" id="universe"></div>
+  
+  <div class="container">
+    <div class="sun"></div>
+    <div class="orbit">
+      <div class="moon">
+        <div class="earth"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-panel">
+    <h2>Solar System Simulation</h2>
+    <p>Real-time visualization of Earth-Moon orbital mechanics.</p>
+    <p id="datetime">Current time: Loading...</p>
+  </div>
+
+  <div class="controls">
+    <button class="control-btn" id="zoomIn">+ Zoom</button>
+    <button class="control-btn" id="zoomOut">- Zoom</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
