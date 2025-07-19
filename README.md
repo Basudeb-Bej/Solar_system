@@ -32,6 +32,6 @@ This project helps visualize our solar system interactively and introduces basic
 
 ## 📸 Screenshots
 
-> image.jpg
+![Solar System Preview](image.jpg)
 
 ---
