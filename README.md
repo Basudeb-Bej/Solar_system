@@ -1,6 +1,6 @@
 # 🌌 Solar System Simulation
 
-Live Demo: [🌍 View Project](https://solar-system-henna-alpha.vercel.app)
+Live Demo: [ View Project](https://solar-system-henna-alpha.vercel.app)
 
 This project is a **solar system simulation** built with HTML, CSS, and JavaScript. It visually represents the movement of planets around the sun in a clean, animated, and responsive layout.
 
@@ -32,7 +32,7 @@ This project helps visualize our solar system interactively and introduces basic
 
 ## 📸 Screenshots
 
-> (`solar.png`)
+> (`image.jpg`)
 
 ---
 
